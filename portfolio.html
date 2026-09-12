@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>نمونه‌کارها | SnowOWL Company</title>
+    <meta name="description" content="SnowOWL Company — نمونه کارهای طراحی سایت و پروژه‌های برنامه‌نویسی">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+    <div class="container navin">
+        <a class="brand" href="index.html">
+            <img src="assets/snowowl-logo.jpeg" alt="SnowOWL Company">
+            <span>SnowOWL<small>COMPANY</small></span>
+        </a>
+        <nav class="menu">
+            <a href="index.html">خانه</a>
+            <a href="services.html">خدمات</a>
+
+            <a class="active" href="portfolio.html">نمونه‌کارها</a>
+            <a href="about.html">درباره ما</a>
+        </nav>
+        <a class="cta-btn" href="about.html#contact">شروع همکاری</a>
+        <button class="mobile">☰</button>
+    </div>
+</header>
+
+<main>
+    <section class="page-title container">
+        <div class="kicker">SNOWOWL / PORTFOLIO</div>
+        <h1>پروژه‌های اجرا شده و نمونه کار های  ما.</h1>
+        <p>نمونه کار های پیش فرض و پروژه های انجام شده.</p>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid3">
+
+                <!-- نمونه کار ۱ -->
+                <article class="card portfolio-card reveal">
+                    <div class="portfolio-thumb">
+                        <html lang="fa" dir="rtl">
+
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اسلایدر نمونه کارها</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #07080a;
+            color: #ffffff;
+            font-family: Tahoma, sans-serif;
+        }
+
+        /* کانتینر اصلی با ابعاد متناسب با عکس شما (16:9) */
+        .slider-container {
+            width: 100%;
+            max-width: 540px;          /* حداکثر عرض اسلایدر */
+            aspect-ratio: 16 / 9;      /* تنظیم دقیق نسبت ابعاد تصویر شما */
+            margin-left: 0;            /* قرارگیری در سمت چپ */
+            margin-right: auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            border: 1px solid #272b32;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .slides {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;       /* نمایش کامل عکس بدون برش */
+            display: block;
+        }
+
+        /* دکمه‌های بعدی و قبلی */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+            z-index: 10;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #000;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+        /* نقاط راهنما (Dots) */
+        .dots-container {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .dot.active {
+            background-color: #ffffff;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slider-container">
+        <div class="slides" id="slides">
+            <!-- عکس اول -->
+            <div class="slide">
+                <img src="assets/Olivia Wilson (8).png" alt="نمونه کار ۱">
+            </div>
+            <!-- عکس دوم -->
+            <div class="slide">
+                <img src="assets/Olivia Wilson (9).png" alt="نمونه کار ۲">
+            </div>
+        </div>
+
+        <button class="prev" onclick="moveSlide(-1)">❮</button>
+        <button class="next" onclick="moveSlide(1)">❯</button>
+
+        <div class="dots-container">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const totalSlides = 2;
+        const slides = document.getElementById('slides');
+        const dots = document.querySelectorAll('.dot');
+
+        function updateSlider() {
+            slides.style.transform = `translateX(${currentIndex * 100}%)`;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function moveSlide(direction) {
+            currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        function currentSlide(index) {
+            currentIndex = index;
+            updateSlider();
+        }
+
+        setInterval(() => {
+            moveSlide(1);
+        }, 4000);
+    </script>
+
+</body>
+</html>
+                    </div>
+                </article>
+
+                <!-- نمونه کار ۲ -->
+                <article class="card portfolio-card reveal">
+                    <div class="portfolio-thumb">
+
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #07080a;
+            color: #ffffff;
+            font-family: Tahoma, sans-serif;
+        }
+
+        /* استایل کلی اسلایدرها */
+        .slider-container {
+            width: 100%;
+            max-width: 540px;
+            aspect-ratio: 16 / 9;
+            margin-left: 0;
+            margin-right: auto;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            border: 1px solid #272b32;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .slides {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* دکمه‌ها */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+            z-index: 10;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #000;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+        /* نقاط */
+        .dots-container {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .dot.active {
+            background-color: #ffffff;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== اسلایدر اول (۴ تایی) ==================== -->
+    <div class="slider-container" id="slider1">
+        <div class="slides">
+            <div class="slide"><img src="assets/Olivia Wilson (7).png" alt="عکس ۱"></div>
+            <div class="slide"><img src="assets/Olivia Wilson (6).png" alt="عکس ۲"></div>
+        </div>
+        <button class="prev">❮</button>
+        <button class="next">❯</button>
+        <div class="dots-container">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+
+        </div>
+    </div>
+
+
+    <!-- ==================== اسلایدر دوم (۲ تایی) ==================== -->
+    <h3>نمونه کار دوم</h3>
+    <div class="slider-container" id="slider2">
+        <div class="slides">
+            <div class="slide"><img src="assets/Olivia Wilson (8)_2.png" alt="عکس ۱"></div>
+            <div class="slide"><img src="assets/Olivia Wilson (7).png" alt="عکس ۲"></div>
+        </div>
+        <button class="prev">❮</button>
+        <button class="next">❯</button>
+        <div class="dots-container">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+
+    <!-- اسکریپت هوشمند مدیریت چند اسلایدر -->
+    <script>
+        function setupSlider(sliderId) {
+            const container = document.getElementById(sliderId);
+            if (!container) return;
+
+            const slides = container.querySelector('.slides');
+            const allSlides = container.querySelectorAll('.slide');
+            const prevBtn = container.querySelector('.prev');
+            const nextBtn = container.querySelector('.next');
+            const dots = container.querySelectorAll('.dot');
+            const totalSlides = allSlides.length;
+            let currentIndex = 0;
+
+            function update() {
+                slides.style.transform = `translateX(${currentIndex * 100}%)`;
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+
+            function move(direction) {
+                currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+                update();
+            }
+
+            nextBtn.addEventListener('click', () => move(1));
+            prevBtn.addEventListener('click', () => move(-1));
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentIndex = index;
+                    update();
+                });
+            });
+
+            setInterval(() => move(1), 4000);
+        }
+
+        // فعال‌سازی اسلایدرها به صورت کاملاً مستقل
+        setupSlider('slider1');
+        setupSlider('slider2');
+    </script>
+
+</body>
+</html>
+                </div>
+            </article>
+
+        <article class="card portfolio-card reveal">
+                    <div class="portfolio-thumb">
+                     <!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اسلایدر نمونه کار سوم</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #07080a;
+            color: #ffffff;
+            font-family: Tahoma, sans-serif;
+        }
+
+        /* کانتینر اصلی اسلایدر با نسبت ۱۶ به ۹ */
+        .slider-container {
+            width: 100%;
+            max-width: 540px;          /* عرض اسلایدر */
+            aspect-ratio: 16 / 9;      /* نسبت ابعاد عکس */
+            margin-left: 0;            /* قرارگیری در سمت چپ */
+            margin-right: auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            border: 1px solid #272b32;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .slides {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;       /* حفظ نمایش کامل عکس */
+            display: block;
+        }
+
+        /* دکمه‌های بعدی و قبلی */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+            z-index: 10;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #000;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+        /* نقاط راهنما (Dots) */
+        .dots-container {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .dot.active {
+            background-color: #ffffff;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- کانتینر اسلایدر سوم با ID اختصاصی slider3 -->
+    <div class="slider-container" id="slider3">
+        <div class="slides">
+            <!-- تصویر اسلاید ۱ -->
+            <div class="slide">
+                <img src="assets/Olivia Wilson.png" alt="نمونه کار جدید - تصویر اول">
+            </div>
+            <!-- تصویر اسلاید ۲ -->
+            <div class="slide">
+                <img src="assets/Olivia Wilson (1).png" alt="نمونه کار جدید - تصویر دوم">
+            </div>
+        </div>
+
+        <!-- دکمه‌های فلش چپ و راست -->
+        <button class="prev">❮</button>
+        <button class="next">❯</button>
+
+        <!-- نقاط پایین اسلایدر برای دو عکس -->
+        <div class="dots-container">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <script>
+        // اسکریپت مستقل برای اسلایدر سوم
+        (function setupSlider3() {
+            const container = document.getElementById('slider3');
+            if (!container) return;
+
+            const slides = container.querySelector('.slides');
+            const allSlides = container.querySelectorAll('.slide');
+            const prevBtn = container.querySelector('.prev');
+            const nextBtn = container.querySelector('.next');
+            const dots = container.querySelectorAll('.dot');
+            const totalSlides = allSlides.length;
+            let currentIndex = 0;
+
+            function updateSlider() {
+                slides.style.transform = `translateX(${currentIndex * 100}%)`;
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+
+            function moveSlide(direction) {
+                currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+                updateSlider();
+            }
+
+            nextBtn.addEventListener('click', () => moveSlide(1));
+            prevBtn.addEventListener('click', () => moveSlide(-1));
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateSlider();
+                });
+            });
+
+            // تعویض خودکار هر ۴ ثانیه
+            setInterval(() => moveSlide(1), 4000);
+        })();
+    </script>
+
+</body>
+</html>
+            </div>
+        </article>
+         <!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نمونه کار دایره‌ای</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #07080a;
+            color: #ffffff;
+            font-family: Tahoma, sans-serif;
+        }
+
+        /* کانتینر اصلی کارت تک‌صفحه‌ای */
+        .single-card-container {
+            width: 100%;
+            max-width: 540px;          /* عرض مشابه اسلایدرها */
+            margin-left: 0;            /* چسبیده به سمت چپ */
+            margin-right: auto;
+            margin-bottom: 30px;
+            padding: 24px;
+            box-sizing: border-box;
+            background-color: #0d0f12;
+            border-radius: 20px;
+            border: 1px solid #272b32;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .single-card-container:hover {
+            border-color: #3b424e;
+            transform: translateY(-3px);
+        }
+
+        /* قاب تصویر کاملاً دایره‌ای */
+        .circle-thumb {
+            width: 180px;              /* قطر دایره */
+            height: 180px;
+            border-radius: 50%;        /* دایره‌ای شدن کامل */
+            overflow: hidden;
+            border: 3px solid #00bcd4; /* رنگ کادر دور دایره */
+            box-shadow: 0 0 20px rgba(0, 188, 212, 0.2);
+            margin-bottom: 18px;
+            background-color: #16191e;
+        }
+
+        .circle-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;         /* پر کردن کامل دایره بدون دفرمه شدن */
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .single-card-container:hover .circle-thumb img {
+            transform: scale(1.08);
+        }
+
+        /* متن‌ها و جزئیات داخل کارت */
+        .card-title {
+            font-size: 20px;
+            margin: 0 0 8px 0;
+            color: #ffffff;
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: #9ea4b0;
+            margin: 0 0 16px 0;
+            line-height: 1.6;
+        }
+
+        /* برچسب‌های پروژه (Tags) */
+        .tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tag {
+            font-size: 12px;
+            background: #1a1e24;
+            color: #00bcd4;
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 1px solid #272b32;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== نمونه کار تک‌صفحه‌ای ۱ (دایره‌ای) ==================== -->
+    <div class="single-card-container">
+        <div class="circle-thumb">
+            <img src="assets/Sample (3).png" alt="تصویر نمونه کار">
+        </div>
+
+
+    </div>
+
+    <!-- ==================== نمونه کار تک‌صفحه‌ای ۲ (دایره‌ای) ==================== -->
+    <div class="single-card-container">
+        <div class="circle-thumb">
+            <img src="assets/Sample (4).png" alt="تصویر نمونه کار">
+        </div>
+
+    </div>
+    <div class="single-card-container">
+        <div class="circle-thumb">
+            <img src="assets/Sample (2).png" alt="تصویر نمونه کار">
+        </div>
+
+    </div>
+
+</body>
+</html>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footerin">
+        <span>© <span data-year></span> SnowOWL Company</span>
+        <span>طراحی وب · برنامه‌نویسی · آموزش . طراحی دیجیتال</span>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
